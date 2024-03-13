@@ -1,0 +1,60 @@
+<!-- templates/landing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QHearts</title>
+
+    {% load static %} 
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; 
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333; 
+            color: #fff; 
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #555; 
+            color: #fff; 
+            cursor: pointer;
+        }
+        .contact-button {
+            background-color: #ff6347; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'logo.png' %}" alt="Logo"> 
+        </div>
+        <div class="buttons">
+            <div class="button">About Us</div>
+            <div class="button">Adopt</div>
+            <div class="button">Report a Rescue</div>
+        </div>
+        <div class="button contact-button">Contact Us</div>
+    </nav>
+    <!--landing page content here -->
+</body>
+</html>
