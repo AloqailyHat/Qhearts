@@ -41,6 +41,38 @@
         .contact-button {
             background-color: #ff6347; 
         }
+        .contact-form {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -49,12 +81,50 @@
             <img src="{% static 'logo.png' %}" alt="Logo"> 
         </div>
         <div class="buttons">
-            <div class="button">About Us</div>
-            <div class="button">Adopt</div>
-            <div class="button">Report a Rescue</div>
+            <a href="#about"><div class="button">About Us</div></a>
+            <a href="#adopt"><div class="button">Adopt</div></a>
+            <a href="#report"><div class="button">Report a Rescue</div></a>
         </div>
-        <div class="button contact-button">Contact Us</div>
+        <a href="#contact" class="button contact-button">Contact Us</a>
     </nav>
+    
     <!--landing page content here -->
+
+    <div id="about">
+        <h2>About Us Section</h2>
+        <!-- Add content for About Us section here -->
+    </div>
+
+    <div id="adopt">
+        <h2>Adopt Section</h2>
+        <!-- Add content for Adopt section here -->
+    </div>
+
+    <div id="report">
+        <h2>Report a Rescue Section</h2>
+        <!-- Add content for Report a Rescue section here -->
+    </div>
+
+    <div id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
