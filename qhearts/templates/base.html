@@ -77,20 +77,24 @@
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <img src="{% static 'logo.png' %}" alt="Logo"> 
-        </div>
-        <div class="buttons">
-            <a href="#about"><div class="button">About Us</div></a>
-            <a href="#adopt"><div class="button">Adopt</div></a>
-            <a href="#report"><div class="button">Report a Rescue</div></a>
-        </div>
-        <a href="#contact" class="button contact-button">Contact Us</a>
-    </nav>
-    
-    <!--landing page content -->
+        <nav>
+            <div class="logo">
+                <img src="{% static 'logo.png' %}" alt="Logo"> 
+            </div>
+            <div class="buttons">
+                <a href="{% url 'about' %}"><div class="button">About Us</div></a>
+                <a href="{% url 'adopt' %}"><div class="button">Adopt</div></a>
+                <a href="{% url 'rescue' %}"><div class="button">Report a Rescue</div></a>
+            </div>
+            <a href="{% url 'contact' %}" class="button contact-button">Contact Us</a>
+        </nav>    </nav>
 
-   
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
 
+    <footer>
+        <!-- footer content -->
+    </footer>
 </body>
 </html>
