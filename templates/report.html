@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="report">
+    <div class="report-content">
+        <h1>Report a Rescue</h1>
+        <div class="report-frame">
+            <img src="{% static 'assets/report_image.png' %}" alt="Report Image">
+            <a href="{% url 'report_rescue_page' %}">
+                <button>Report a Rescue</button>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

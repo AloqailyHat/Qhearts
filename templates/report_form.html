@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="report-form">
+    <h1>Report a Rescue</h1>
+    <form action="{% url 'report_rescue' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- Add your form fields here -->
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" maxlength="100" required>
+
+        <label for="mobile">Your Mobile:</label>
+        <input type="text" id="mobile" name="mobile" maxlength="15" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Your Address:</label>
+        <input type="url" id="address" name="address" required>
+
+        <label for="situation">Situation Details:</label>
+        <textarea id="situation" name="situation" required></textarea>
+
+        <label for="picture">Picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*">
+
+        <label for="video">Video:</label>
+        <input type="file" id="video" name="video" accept="video/*">
+
+        <label for="animal_type">Animal Type:</label>
+        <input type="text" id="animal_type" name="animal_type" maxlength="50" required>
+
+        <label for="behavior">Behavior:</label>
+        <select id="behavior" name="behavior" required>
+            <option value="friendly">Friendly</option>
+            <option value="aggressive">Aggressive</option>
+        </select>
+
+        <label for="keep_at_place">Can you keep the animal at your place?</label>
+        <select id="keep_at_place" name="keep_at_place" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="bring_to_shelter">Can you bring the animal to our shelter?</label>
+        <select id="bring_to_shelter" name="bring_to_shelter" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="adopt_after_treatment">Are you willing to adopt the animal after treatment?</label>
+        <select id="adopt_after_treatment" name="adopt_after_treatment" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+{% endblock %}

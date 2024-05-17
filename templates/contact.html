@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="contact">
+    <h1>Contact us</h1>
+    <div class="contact-frame">
+        <img src="{% static 'assets/contact_image.png' %}" alt="Contact Image">
+        <button onclick="window.location.href='{% url 'contact_form' %}'">Contact Us</button>
+    </div>
+</section>
+{% endblock %}

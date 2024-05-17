@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qhearts | كيوهارتس</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'assets/logo.png' %}" alt="Qhearts Logo">
+        </div>
+        <div class="menu">
+            <a href="{% url 'home' %}#about">About us</a>
+            <a href="{% url 'home' %}#adopt">Adopt</a>
+            <a href="{% url 'home' %}#report">Report a rescue</a>
+            <a href="{% url 'home' %}#store">Store</a>
+            <button onclick="window.location.href='{% url 'home' %}#contact'">Contact us</button>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <a href="{% url 'home' %}#about">About us</a>
+        <a href="{% url 'home' %}#adopt">Adopt</a>
+        <a href="{% url 'home' %}#report">Report a rescue</a>
+        <a href="{% url 'home' %}#contact">Contact us</a>
+        <div class="social-icons">
+            <a href="twitter_link">Twitter</a>
+            <a href="instagram_link">Instagram</a>
+            <a href="tiktok_link">TikTok</a>
+        </div>
+        <div class="footer-logo">
+            <img src="{% static 'assets/logo.png' %}" alt="Qhearts Logo">
+        </div>
+        <p>&copy; 2017 Qhearts</p>
+    </footer>
+</body>
+</html>

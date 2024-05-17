@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="home">
+    <div class="home-content">
+        <h1>Qhearts</h1>
+        <p>Volunteering rescue group</p>
+        <img src="{% static 'assets/animal.png' %}" alt="Animal">
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="about-content">
+        <h1>About us</h1>
+        <p>Welcome to Qassim Animal Rescue!</p>
+        <div class="about-frames">
+            <div class="about-frame">
+                <h2>Our Story</h2>
+                <p>Founded in 2016, Qassim Animal Rescue is a passionate group of animal lovers dedicated to making a difference in the lives of our furry friends...</p>
+            </div>
+            <div class="about-frame">
+                <h2>Our Mission</h2>
+                <p>At Qassim Animal Rescue, our mission is clear: to rescue, rehabilitate, and re-home animals...</p>
+            </div>
+            <div class="about-frame">
+                <h2>What Drives Us</h2>
+                <p>Our founder, Maram, is the heartbeat of our organization...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="adopt" class="adopt">
+    <div class="adopt-content">
+        <h1>Adopt</h1>
+        <p>Adopt via our Instagram account</p>
+        <div class="adopt-frames">
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat1.jpg' %}" alt="Cat 1">
+                <a href="https://www.instagram.com/p/URL1" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat2.jpg' %}" alt="Cat 2">
+                <a href="https://www.instagram.com/p/URL2" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat3.jpg' %}" alt="Cat 3">
+                <a href="https://www.instagram.com/p/URL3" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat4.jpg' %}" alt="Cat 4">
+                <a href="https://www.instagram.com/p/URL4" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="report" class="report">
+    <div class="report-content">
+        <h1>Report a Rescue</h1>
+        <div class="report-frame">
+            <img src="{% static 'assets/report_image.png' %}" alt="Report Image">
+            <a href="{% url 'report_rescue_page' %}">
+                <button>Report a rescue</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="store">
+    <!-- Store section content here -->
+</section>
+
+<section id="contact" class="contact">
+    <h1>Contact us</h1>
+    <div class="contact-frame">
+        <img src="{% static 'assets/contact_image.png' %}" alt="Contact Image">
+        <button onclick="window.location.href='{% url 'contact_form_page' %}'">Contact Us</button>
+    </div>
+</section>
+{% endblock %}

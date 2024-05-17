@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Submitted Rescue Reports</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Animal Type</th>
+            <th>Behavior</th>
+            <th>Submitted At</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.name }}</td>
+            <td>{{ report.mobile }}</td>
+            <td>{{ report.email }}</td>
+            <td>{{ report.animal_type }}</td>
+            <td>{{ report.behavior }}</td>
+            <td>{{ report.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

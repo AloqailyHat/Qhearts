@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="adopt">
+    <div class="adopt-content">
+        <h1>Adopt</h1>
+        <p>Adopt via our Instagram account</p>
+        <div class="adopt-frames">
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat1.jpg' %}" alt="Cat 1">
+                <a href="https://www.instagram.com/p/URL1" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat2.jpg' %}" alt="Cat 2">
+                <a href="https://www.instagram.com/p/URL2" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat3.jpg' %}" alt="Cat 3">
+                <a href="https://www.instagram.com/p/URL3" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+            <div class="adopt-frame">
+                <img src="{% static 'assets/cat4.jpg' %}" alt="Cat 4">
+                <a href="https://www.instagram.com/p/URL4" target="_blank">
+                    <button>View on Instagram</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
